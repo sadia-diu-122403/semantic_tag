@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Pharmacy - Your Health Partner</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-green': '#10b981', // Emerald 500
+                        'secondary-blue': '#3b82f6', // Blue 500
+                        'bg-light': '#f9fafb', // Gray 50
+                        'text-dark': '#1f2937', // Gray 800
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for professional look and feel */
+        .shadow-custom {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+        }
+        .article-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-bg-light text-text-dark font-sans antialiased">
+
+    <!-- HEADER: Site-wide header for branding and main navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center">
+            <!-- Logo/Branding -->
+            <div class="text-2xl font-bold text-primary-green tracking-tight mb-3 md:mb-0">
+                <span role="img" aria-label="A green cross icon">⚕️</span> Wellness Pharmacy
+            </div>
+
+            <!-- NAV: Main site navigation -->
+            <nav aria-label="Primary site navigation">
+                <ul class="flex space-x-4 sm:space-x-6">
+                    <li><a href="#services" class="text-text-dark hover:text-secondary-blue transition duration-150 font-medium">Services</a></li>
+                    <li><a href="#products" class="text-text-dark hover:text-secondary-blue transition duration-150 font-medium">Shop</a></li>
+                    <li><a href="#blog" class="text-text-dark hover:text-secondary-blue transition duration-150 font-medium">Health Tips</a></li>
+                    <li><a href="#contact" class="text-text-dark hover:text-secondary-blue transition duration-150 font-medium">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN: Primary content of the page -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+        <!-- SECTION: Hero/Promotions -->
+        <section id="hero" class="bg-secondary-blue text-white p-8 md:p-12 rounded-xl shadow-xl mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Your Local Partner in Health</h1>
+            <p class="text-xl mb-6 opacity-90">Friendly service, expert advice, and everything you need for wellness, delivered right to your door.</p>
+            <a href="#products" class="inline-block bg-primary-green hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition duration-300">
+                Explore Products
+            </a>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="flex flex-col lg:flex-row gap-8">
+
+            <!-- Primary Content Area (Sections and Articles) -->
+            <div class="lg:w-3/4">
+
+                <!-- SECTION: Our Services -->
+                <section id="services" class="mb-12">
+                    <h2 class="text-3xl font-bold text-primary-green border-b-2 border-primary-green pb-2 mb-6">Our Core Services</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- ARTICLE: Service 1 -->
+                        <article class="bg-white p-6 rounded-lg shadow-custom transition duration-300">
+                            <h3 class="text-xl font-semibold mb-3 text-secondary-blue">Prescription Refills</h3>
+                            <p class="text-gray-600 text-sm">Fast and accurate prescription filling. Use our online portal for quick refills and pickup notifications.</p>
+                        </article>
+                        
+                        <!-- ARTICLE: Service 2 -->
+                        <article class="bg-white p-6 rounded-lg shadow-custom transition duration-300">
+                            <h3 class="text-xl font-semibold mb-3 text-secondary-blue">Vaccination Clinic</h3>
+                            <p class="text-gray-600 text-sm">Offering flu shots, COVID-19 boosters, and other necessary immunizations. Book an appointment online.</p>
+                        </article>
+                        
+                        <!-- ARTICLE: Service 3 -->
+                        <article class="bg-white p-6 rounded-lg shadow-custom transition duration-300">
+                            <h3 class="text-xl font-semibold mb-3 text-secondary-blue">Medication Reviews</h3>
+                            <p class="text-gray-600 text-sm">Personalized consultation with a pharmacist to review your medications and ensure optimal therapy.</p>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- SECTION: Featured Product Showcase (Including Figure/Figcaption) -->
+                <section id="products" class="mb-12">
+                    <h2 class="text-3xl font-bold text-primary-green border-b-2 border-primary-green pb-2 mb-6">Daily Wellness Essentials</h2>
+
+                    <!-- FIGURE and FIGCAPTION: Used for an image or diagram related to the content -->
+                    <figure class="bg-white p-6 rounded-lg shadow-custom mb-6 w-full md:w-2/3 mx-auto">
+                        <img src="https://placehold.co/800x300/e0f2f1/064e3b?text=Vitamins+and+Supplements" alt="A selection of vitamin bottles and health supplements" class="w-full h-auto rounded-md object-cover">
+                        <figcaption class="mt-3 text-center text-sm italic text-gray-500">
+                            Daily essentials, curated by our expert pharmacists for maximum benefit.
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <!-- SECTION: Health & Wellness Blog -->
+                <section id="blog" class="mb-12">
+                    <h2 class="text-3xl font-bold text-primary-green border-b-2 border-primary-green pb-2 mb-6">Health & Wellness Blog</h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- ARTICLE: Blog Post Preview 1 -->
+                        <article class="bg-white p-6 rounded-lg shadow-custom transition duration-300 article-card">
+                            <h3 class="text-xl font-semibold mb-2 text-text-dark">Tips for Boosting Winter Immunity</h3>
+                            <p class="text-gray-600 text-sm mb-3">Learn about the best vitamins and lifestyle changes to help you stay healthy during cold and flu season.</p>
+                            <a href="#" class="text-secondary-blue hover:underline text-sm font-medium">Read More &rarr;</a>
+                        </article>
+
+                        <!-- ARTICLE: Blog Post Preview 2 -->
+                        <article class="bg-white p-6 rounded-lg shadow-custom transition duration-300 article-card">
+                            <h3 class="text-xl font-semibold mb-2 text-text-dark">Understanding Your Blood Pressure Medication</h3>
+                            <p class="text-gray-600 text-sm mb-3">A detailed guide on how different blood pressure medications work and how to take them correctly.</p>
+                            <a href="#" class="text-secondary-blue hover:underline text-sm font-medium">Read More &rarr;</a>
+                        </article>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- ASIDE: Supplementary content, separate from the main flow -->
+            <aside class="lg:w-1/4 space-y-8">
+                
+                <!-- Quick Contact Block -->
+                <div id="contact" class="bg-white p-6 rounded-lg shadow-custom border-t-4 border-primary-green">
+                    <h3 class="text-xl font-bold mb-3 text-primary-green">Quick Contact</h3>
+                    <address class="not-italic text-sm space-y-2">
+                        <p><span class="font-semibold">Phone:</span> (555) 123-4567</p>
+                        <p><span class="font-semibold">Email:</span> hello@wellnessrx.com</p>
+                        <p><span class="font-semibold">Address:</span> 123 Health Ave, Anytown</p>
+                    </address>
+                </div>
+                
+                <!-- Operating Hours Block -->
+                <div class="bg-white p-6 rounded-lg shadow-custom border-t-4 border-secondary-blue">
+                    <h3 class="text-xl font-bold mb-3 text-secondary-blue">Operating Hours</h3>
+                    <ul class="text-sm space-y-1">
+                        <li>Mon - Fri: 9:00 AM - 7:00 PM</li>
+                        <li>Saturday: 9:00 AM - 5:00 PM</li>
+                        <li class="font-bold text-red-500">Sunday: Closed</li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div> <!-- End Main Content Grid -->
+
+    </main>
+
+    <!-- FOOTER: Site-wide footer for secondary links and copyright -->
+    <footer class="bg-text-dark text-white mt-12 py-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 border-b border-gray-700 pb-6 mb-6">
+                <!-- Footer Column 1: About -->
+                <div>
+                    <h4 class="font-bold text-lg mb-3 text-primary-green">About Us</h4>
+                    <p class="text-sm text-gray-400">Committed to providing compassionate pharmaceutical care and fostering community health since 1998.</p>
+                </div>
+
+                <!-- Footer Column 2: Quick Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-3 text-primary-green">Quick Links</h4>
+                    <ul class="text-sm space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-150">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 3: Location Map Placeholder -->
+                <div>
+                    <h4 class="font-bold text-lg mb-3 text-primary-green">Find Us</h4>
+                    <div class="h-24 bg-gray-700 rounded-lg flex items-center justify-center">
+                        <span class="text-gray-400 text-sm">Map Location Placeholder</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright and Final Attribution -->
+            <div class="text-center text-sm text-gray-500 pt-4">
+                &copy; 2024 Wellness Pharmacy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
